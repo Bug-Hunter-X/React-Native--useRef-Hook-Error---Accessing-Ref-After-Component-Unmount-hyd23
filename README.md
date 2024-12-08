@@ -1,0 +1,5 @@
+# React Native: useRef Hook Error - Accessing Ref After Component Unmount
+
+This repository demonstrates a common error in React Native applications related to the `useRef` hook and asynchronous operations.  The error occurs when attempting to access a ref's current value after the component has unmounted. This typically manifests as an error indicating that a component is attempting to access a property of a component that has already been unmounted. This is because asynchronous operations like network requests, timers, or animations may complete after the component is unmounted from the DOM.
+
+The provided code showcases the error and its solution.  The solution involves using a state variable to track the component's mounted status and only accessing the ref if the component is still mounted.
